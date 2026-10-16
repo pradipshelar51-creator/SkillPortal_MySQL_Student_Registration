@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Records | SkillPortal</title>
+  <link rel="stylesheet" href="styles.css"><link rel="stylesheet" href="pages.css">
+  <style>
+    .records-wrap{max-width:1100px;margin:0 auto;padding:48px 7% 80px}.records-panel{background:#fff;border:1px solid #e0e7f1;border-radius:16px;padding:24px;box-shadow:0 8px 24px rgba(35,53,84,.05);overflow-x:auto}.records-table{width:100%;border-collapse:collapse;margin-top:18px}.records-table th,.records-table td{text-align:left;padding:13px;border-bottom:1px solid #e8edf5;white-space:nowrap}.records-table th{background:#f3f6fc;color:#243a60}.status-message{padding:13px 15px;background:#eef4ff;border-radius:9px;margin:14px 0;color:#243a60}.status-message.error{background:#fff0f0;color:#922}.record-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px}.record-actions a,.record-actions button{border:0;border-radius:9px;padding:11px 15px;background:#245bd6;color:#fff;text-decoration:none;font:inherit;cursor:pointer}.record-actions .secondary{background:#eef3ff;color:#245bd6}
+  </style>
+  <script src="students.js" defer></script>
+</head>
+<body>
+  <header class="site-header"><a class="brand" href="index.html"><span class="brand-mark">S</span> SkillPortal</a><button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">☰</button><nav id="mainNav"><a href="index.html">Home</a><a href="skills.html">Skills</a><a href="companies.html">Company Skills</a><a href="placement.html">Placement Prep</a><a href="projects.html">Projects</a><a class="active" href="students.html">Student Records</a></nav></header>
+  <section class="page-hero"><p class="eyebrow">DATABASE DEMONSTRATION</p><h1>Registered <span>Students</span></h1><p>This page reads student records saved in your MySQL database through the Node.js REST API.</p></section>
+  <main class="records-wrap"><section class="records-panel"><h2 class="page-title">Student database records</h2><p class="page-intro">Register a student from the Student Login / Register form on the homepage, then refresh this list.</p><div id="recordsStatus" class="status-message" role="status">Loading student records from the database...</div><table class="records-table"><thead><tr><th>ID</th><th>Student Name</th><th>Email</th><th>Primary Skill</th><th>Registered At</th></tr></thead><tbody id="studentRows"></tbody></table><div class="record-actions"><a href="index.html">Back to Home</a><button id="refreshRecords" type="button" class="secondary">Refresh records</button></div></section></main>
+  <footer><a class="brand" href="index.html"><span class="brand-mark">S</span> SkillPortal</a><p>Student Career Development · Learn, build and grow.</p></footer>
+</body>
+</html>
